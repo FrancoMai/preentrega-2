@@ -12,7 +12,7 @@ const tomarAsistencia = (nombre,p)=>{
     }
 }
 
-for(i=0; i < 1; i++){
+for(i=0; i < cantidad; i++){
     for (alumno in alumnosTotales){
         tomarAsistencia(alumnosTotales[alumno][0],alumno);
     }
@@ -22,10 +22,10 @@ for(i=0; i < 1; i++){
 for (alumno in alumnosTotales) {
     let resultado = `${alumnosTotales[alumno][0]}:<br>
     _Presentes: ${alumnosTotales[alumno][1]} <br>
-    _Ausencias: ${parseInt (alumnosTotales[alumno[1]])}`;
+    _Ausencias: ${(alumnosTotales[alumno[1]])}`;
     if (alumnosTotales [alumno][1]<1){
-        resultado =+ "AUSENTE";
+        resultado += "<br>";
     } else {
-    resultado =+ "<br><br>"}
+    resultado += "<br><br>"}
+    document.write(resultado)
 }
-document.write(resultado)
